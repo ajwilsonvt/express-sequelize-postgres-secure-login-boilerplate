@@ -4,7 +4,7 @@
 
 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
 
-## get started
+## getting started
 
 1. clone the repo
 
