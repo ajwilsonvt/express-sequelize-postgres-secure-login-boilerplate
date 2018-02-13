@@ -1,4 +1,4 @@
-# express-sequelize-secure-login-boilerplate
+# express-sequelize-postgres-secure-login-boilerplate
 
 ## style guide
 
