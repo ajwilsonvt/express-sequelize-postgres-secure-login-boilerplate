@@ -17,6 +17,7 @@
 ```bash
 $ cd app
 $ npm i
+$ npm run build
 $ sudo npm start
 ```
 
