@@ -18,6 +18,8 @@
     "express-ejs-layouts": "latest",
     "express-session": "latest",
     "morgan": "latest",
+    "mysql2": "latest",
+    "npm-check-updates": "latest",
     "passport": "latest",
     "passport-local": "latest",
     "pg": "latest",
