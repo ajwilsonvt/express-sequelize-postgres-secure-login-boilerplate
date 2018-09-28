@@ -141,3 +141,15 @@ the prefix `$2a$10$` in the shadow password record of a bcrypt hashed password m
 `$2a$` indicates that hash string is a bcrypt hash in modular crypt format
 
 `$10$` indicates a cost parameter of 10, meaning 2^10 rounds of hashing occurred
+
+# update dependencies to latest versions
+
+`rm -rf node_modules/`
+
+option 1. manually change all versions in `package.json` to latest and run `npm i --save`
+
+option 2. run `node_modules/npm-check-updates/bin/ncu -u`. may have to change all versions to `0.1.0` first to ensure the dependencies will update.
+
+# sequelize-cli
+
+`node_modules/.bin/sequelize [command]`
