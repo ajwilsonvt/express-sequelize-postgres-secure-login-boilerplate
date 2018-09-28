@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "nodemon ./bin/www",
-    "build": "sequelize db:migrate:undo:all && sequelize db:migrate"
+    "build": "node_modules/.bin/sequelize db:migrate:undo:all && node_modules/.bin/sequelize db:migrate",
+    "update:latest": "node_modules/npm-check-updates/bin/ncu -u"
   },
   "dependencies": {
     "bcrypt": "latest",
