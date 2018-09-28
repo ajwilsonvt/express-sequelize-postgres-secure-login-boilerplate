@@ -142,7 +142,7 @@ the prefix `$2a$10$` in the shadow password record of a bcrypt hashed password m
 
 `$10$` indicates a cost parameter of 10, meaning 2^10 rounds of hashing occurred
 
-# update dependencies to latest versions
+### update dependencies to latest versions
 
 `rm -rf node_modules/`
 
@@ -150,6 +150,10 @@ option 1. manually change all versions in `package.json` to latest and run `npm 
 
 option 2. run `node_modules/npm-check-updates/bin/ncu -u`. may have to change all versions to `0.1.0` first to ensure the dependencies will update.
 
-# sequelize-cli
+option 3. `npm run update:latest` performs the above
+
+### sequelize-cli
 
 `node_modules/.bin/sequelize [command]`
+
+`npm run build` - undoes migrations then does migrations
