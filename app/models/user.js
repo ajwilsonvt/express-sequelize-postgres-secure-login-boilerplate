@@ -58,13 +58,10 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     underscored: true,
-  }, {
-    classMethods: {
-      associate(models) {
-        // associations can be defined here
-      },
-    },
   });
+  user.associate = function (models) {
+    // associations can be defined here
+  };
 
   /**
    * Before hook on every db.user.create().
