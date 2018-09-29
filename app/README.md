@@ -157,3 +157,19 @@ option 3. `npm run update:latest` performs the above
 `node_modules/.bin/sequelize [command]`
 
 `npm run build` - undoes migrations then does migrations
+
+### eslint
+
+[https://github.com/eslint/eslint](https://github.com/eslint/eslint)
+
+#### init
+
+`node_modules/.bin/eslint --init` or `npm run eslint --init`
+
+#### lint
+
+`node_modules/.bin/eslint [file]` or `npm run eslint [file]`
+
+#### fix
+
+`node_modules/.bin/eslint --fix [file]`
