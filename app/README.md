@@ -20,7 +20,8 @@
 cd app
 npm i
 npm run build
-sudo npm start
+npm run start:dev
+# npm start
 ```
 
 ## boilerplate tasks completed
@@ -31,7 +32,7 @@ cd app
 npm i --save sequelize express-ejs-layouts dotenv
 npm i --save-dev nodemon eslint eslint-plugin-import
 npm i --save-dev eslint-config-airbnb-base
-sequelize init
+node_modules/.bin/sequelize init
 mkdir routes/api
 mkdir views/partials
 touch views/layout.ejs
@@ -58,7 +59,7 @@ app.set('view engine', 'ejs');
 
 ### ESLint instructions
 
-download ESLint, SublimeLinter, SublimeLinter-ESLint, and run `eslint --init` to setup eslint
+download ESLint, SublimeLinter, SublimeLinter-ESLint, and run `node_modules/.bin/eslint --init` to setup eslint
 
 https://github.com/SublimeLinter/SublimeLinter-eslint
 
@@ -69,17 +70,19 @@ SSL/ TLS - Secure Sockets Layer, the latest version is called Transport Layer Se
 generate a private key called server.key ad a certificate called cert.pem in desired directory
 
 ```bash
-mkdir -p /usr/local/directory/
-cd /usr/local/directory/
+mkdir -p /usr/local/ssl/
+cd /usr/local/ssl/
+chmod 700 /usr/local/ssl/
 openssl req -x509 -sha256 -nodes -newkey rsa:2048 -keyout server.key -out cert.pem -days 90
+chmod 600 server.key cert.pem
 ```
 
 add the following to `/bin/www` or `/app.js` depending on setup
 
 ```js
 var options = {
-  key: fs.readFileSync('/usr/local/directory/server.key'),
-  cert: fs.readFileSync('/usr/local/directory/cert.pem')
+  key: fs.readFileSync('/usr/local/ssl/server.key'),
+  cert: fs.readFileSync('/usr/local/ssl/cert.pem')
 }
 
 https.createServer(options, app).listen(port, (err) => {
