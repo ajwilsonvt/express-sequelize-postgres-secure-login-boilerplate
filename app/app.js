@@ -7,9 +7,9 @@ const logger = require('morgan');
 // const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const ejsLayouts = require('express-ejs-layouts');
-const passport = require('./config/ppConfig');
 const session = require('express-session');
 const flash = require('connect-flash');
+const passport = require('./config/ppConfig');
 const isLoggedInAdmin = require('./middleware/isLoggedInAdmin');
 
 const app = express();
@@ -34,8 +34,8 @@ app.use(session({
   cookie: {
     // cookie will only be set over HTTPS
     secure: true,
-    // cookie expires every 600 ms === 10 min and user will have to log back in
-    maxAge: 600000,
+    // cookie TTL in milliseconds
+    maxAge: 1000 * 60 * 60 * 3,
   },
 }));
 app.use(flash());
